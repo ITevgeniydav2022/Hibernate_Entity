@@ -11,8 +11,10 @@ import java.util.List;
 public class Application {
 
     public static void main(String[] args) {
+
         EmployeeDao employeeDao = new EmployeeDaoImpl();
         CityDao cityDao = new CityDaoImpl();
+
         City city = new City("Краснодар");
         List<Employee> employees = new ArrayList<>();
         employees.add(new Employee("Anna", "Ivanova", "woman", 24, city));

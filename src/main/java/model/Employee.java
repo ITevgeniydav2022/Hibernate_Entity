@@ -9,9 +9,9 @@ public class Employee {
     @Column(name = "id")
     private long id;
     @Column(name = "first_name", nullable = false, length = 50)
-    private String first_name;
+    private String firstName;
     @Column(name = "last_name", nullable = false, length = 50)
-    private String last_name;
+    private String lastName;
     @Column(name = "gender", nullable = false, length = 6)
     private String gender;
     @Column(name = "age")
@@ -24,23 +24,23 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String first_name, String last_name, String gender, int age) {
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public Employee(String firstName, String lastName, String gender, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.gender = gender;
         this.age = age;
     }
-    public Employee(String first_name, String last_name, String gender, int age, City city) {
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public Employee(String firstName, String lastName, String gender, int age, City city) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.gender = gender;
         this.age = age;
         this.city = city;
     }
-    public Employee(long id, String first_name, String last_name, String gender, int age, City city) {
+    public Employee(long id, String firstName, String lastName, String gender, int age, City city) {
         this.id = id;
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.gender = gender;
         this.age = age;
         this.city = city;
@@ -51,17 +51,17 @@ public class Employee {
     public void setId(long id) {
         this.id = id;
     }
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
     public String getGender() {
         return gender;
@@ -85,8 +85,8 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
+                ", first_name='" + firstName + '\'' +
+                ", last_name='" + lastName + '\'' +
                 ", gender='" + gender + '\'' +
                 ", age=" + age +
                 ", city=" + city +
